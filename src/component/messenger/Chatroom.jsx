@@ -210,7 +210,7 @@ function Chatroom({ chatroomList, setIsChatroomOpen, chatroomCode, setChatroomCo
                                                         <div className={styles.member_info}>
                                                             <div className={styles.member_list_img_and_name}>
                                                                 <img
-                                                                    src={employee?.profileList ? (employee.profileList[0]?.profileChangedFile ?? `/profile1.png`) : `/profile1.png`}
+                                                                    src={(employee?.profileList && employee.profileList[0]?.profileChangedFile) ? `http://${process.env.REACT_APP_RESTAPI_IP}:1208/web-images/${employee.profileList[0]?.profileChangedFile}` : `/profile1.png`}
                                                                     alt='멤버사진'
                                                                 />
                                                                 <span>{employee?.employeeName}</span>
@@ -262,7 +262,7 @@ function Chatroom({ chatroomList, setIsChatroomOpen, chatroomCode, setChatroomCo
                                                         <div className={styles.member_info}>
                                                             <div className={styles.member_list_img_and_name}>
                                                                 <img
-                                                                    src={employee?.profileList ? (employee.profileList[0]?.profileChangedFile ?? `http://${process.env.REACT_APP_RESTAPI_IP}:1208/web-images/${employee.profileList[0]?.profileChangedFile}`) : `/profile1.png`}
+                                                                    src={employee?.profileList ? `http://${process.env.REACT_APP_RESTAPI_IP}:1208/web-images/${employee.profileList[0]?.profileChangedFile}` : `/profile1.png`}
                                                                     alt='멤버사진'
                                                                 />
                                                                 <span>{employee?.employeeName}</span>
