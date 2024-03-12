@@ -89,7 +89,7 @@ function MailWrite() {
                     break;
                 case 'reserve':
                     if (reserveDate === '') {
-                        showAlert('날짜를 선택하세요.')
+                        showAlert('메일이 도착했습니다.')
                     } else {
                         const emailDTO = {
                             emailTitle: title,
